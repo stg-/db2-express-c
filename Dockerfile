@@ -6,7 +6,7 @@ ENV DB2_RESP_FILE db2expc.rsp
 ENV DB2_DIR /opt/ibm/db2/V10.5
 
 RUN dpkg --add-architecture i386 && apt-get update
-RUN apt-get install -y libaio1 libpam-ldap:i386 libstdc++6-4.4-pic lib32stdc++6 libxml2
+RUN apt-get install -y libaio1 libpam-ldap:i386 libstdc++6-4.7-pic lib32stdc++6 libxml2
 
 ADD v10.5_linuxx64_expc.tar.gz /tmp/
 COPY ${DB2_RESP_FILE} /tmp/${DB2_RESP_FILE}
